@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs.kotlin"
@@ -30,16 +30,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(':core')
-    implementation project(':data_storage')
-    implementation project(':settings')
-    implementation project(':start_screen')
-    implementation project(':user_details')
-    implementation project(':users_list')
-    implementation project(':main_screen')
-    implementation project(':splash_screen')
-
 
     implementation Deps.kotlin
     implementation Deps.supportAppCompat
     implementation Deps.navComp
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }

@@ -7,6 +7,12 @@ buildscript {
         jcenter()
         
     }
+
+    ext {
+        navigationArgsPath = '/build/generated/source/navigation-args'
+        appNavigation = "${project(':app').projectDir.path}$navigationArgsPath"
+    }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"

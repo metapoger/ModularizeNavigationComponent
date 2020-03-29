@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.metapoger.modularizenavigationcomponent.NavAppDirections
 import kotlinx.android.synthetic.main.fragment_start_screen.*
 
 class StartScreenFragment : Fragment() {
@@ -20,7 +21,7 @@ class StartScreenFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         toMainScreenBtn.setOnClickListener {
-            //TODO
+            findNavController().navigate(NavAppDirections.actionGlobalToMainScreen())
         }
     }
 }

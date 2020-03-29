@@ -14,7 +14,7 @@ class MainScreenFragment : TabNavigationFragment() {
     override val containerId = R.id.homeScreenContainer
     override val tabs = listOf(
         Tab("Users", R.navigation.nav_users_list),
-        Tab("Setings", R.navigation.nav_settings)
+        Tab("Settings", R.navigation.nav_settings)
     )
     private lateinit var selectedTab: Tab
 

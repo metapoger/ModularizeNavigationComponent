@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_app" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/splashFragment">
+
+    <include
+        android:id="@+id/startGraph"
+        app:graph="@navigation/nav_start_screen" />
+
+    <include
+        android:id="@+id/mainGraph"
+        app:graph="@navigation/nav_main_screen" />
+
+    <action
+        android:id="@+id/action_global_to_main_screen"
+        app:destination="@+id/mainGraph" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.metapoger.splash_screen.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash" />
+    <action
+        android:id="@+id/action_global_startGraph"
+        app:destination="@id/startGraph" />
+</navigation>
