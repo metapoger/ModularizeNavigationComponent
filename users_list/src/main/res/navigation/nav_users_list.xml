@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_users_list"
+    app:startDestination="@id/usersListFragment">
+
+    <fragment
+        android:id="@+id/usersListFragment"
+        android:name="com.metapoger.sampledata.UsersListFragment"
+        android:label="fragment_users_list"
+        tools:layout="@layout/fragment_users_list">
+        <action
+            android:id="@+id/action_usersListFragment_to_nav_user_details"
+            app:destination="@id/user_details_graph" />
+    </fragment>
+
+    <include
+        android:id="@+id/user_details_graph"
+        app:graph="@navigation/nav_user_details" />
+
+</navigation>
